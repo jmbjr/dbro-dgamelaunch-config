@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# Publish everything other than the dgamelaunch-dev.conf file.
+# Publish everything other than the dgamelaunch-dorf.conf file.
 #
 
 assert-chroot-exists

@@ -35,7 +35,7 @@ test-set-dgl-home() {
         return 0
     fi
     local dir=$1
-    if [[ -d "$dir" && -d "$dir/bin" && -f "$dir/dgamelaunch-dev.conf" \
+    if [[ -d "$dir" && -d "$dir/bin" && -f "$dir/dgamelaunch-dorf.conf" \
            && -d "$dir/chroot" ]]; then
         export DGL_CONF_HOME="$(canonical-name $dir)"
         export DGL_CONF_LOGS="$dir/logs"
