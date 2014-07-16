@@ -4,5 +4,5 @@
 #
 
 assert-chroot-exists
-set -- "--confirm" "--skip" "dgamelaunch-dev.conf" "$@"
+set -- "--confirm" "--skip" "dgamelaunch-dorf.conf" "$@"
 source $DGL_CONF_HOME/bin/publish.sh
