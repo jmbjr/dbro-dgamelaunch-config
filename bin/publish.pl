@@ -19,12 +19,7 @@ GetOptions(\%OPT, "match=s", "skip=s", "confirm", "target=s")
 my $CHROOT = $ENV{DGL_CHROOT};
 die "DGL chroot not specified in environment\n" unless $CHROOT;
 
-my @COPY_TARGETS = ([ 'dgamelaunch-dev.conf', '//etc' ],
-                    [ 'utils/auth-save-downloader-dev.pl', '//usr/lib/cgi-bin' ],
-                    [ 'utils/trigger-rebuild-dev.pl', '//usr/lib/cgi-bin' ],
-                    [ 'utils/webtiles-dev', '//etc/init.d' ],
-                    [ 'config.py', "/crawl-master/webserver" ],
-                    [ 'config.json', "/crawl-master/webserver" ],
+my @COPY_TARGETS = ([ 'dgamelaunch-dorf.conf', '//etc' ],
                     [ 'chroot/data/menus/*.txt', "/dgldir/data/menus" ],
                     [ 'chroot/data/*.{rc,macro}', "/dgldir/data" ],
                     [ 'chroot/bin/*.sh', '/bin' ],
@@ -146,7 +141,7 @@ sub substitute_variable($$) {
 
 sub file_needs_banner($) {
   my $filename = shift;
-  $filename =~ /(?:dgamelaunch-dev\.conf|\.sh|\.pl)$/
+  $filename =~ /(?:dgamelaunch-dorf\.conf|\.sh|\.pl)$/
 }
 
 sub file_banner($) {
