@@ -1,7 +1,10 @@
-Crawl server (North America) hosted and maintained by John Boyle (johnstein).
+Dorf Server (North America) hosted and maintained by John Boyle (johnstein).
 ------------------------------------------------------------------------------
-Webtiles:           https://dev.berotato.org/
-Crawl information:  http://crawl.develz.org/
+Instructions for setting up your own server:
+https://github.com/jmbjr/dbro-dgamelaunch-config/  (see wiki)
+
+Dwarf Fortress: http://bay12games.com/dwarves
+
 ------------------------------------------------------------------------------
 ** Games on this server are recorded for in-progress viewing and playback! **
 ------------------------------------------------------------------------------
