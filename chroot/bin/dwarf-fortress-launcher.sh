@@ -74,13 +74,13 @@ sed "s/df_XXXXXX/${major_version}\/df_${user}/g"> "$userdir/dwizzell.pl"
 #check to see if we have enough open slots
 #TODO num_current_games=`ls -R -1 ${inprogressdir} |wc -l`
 
-if [ "${num_current_games}" -gt "${MAXGAMES}" ]; then
-   exec /bin/too-many-df-games.sh
-else
+#if [ "${num_current_games}" -gt "${MAXGAMES}" ]; then
+#   exec /bin/too-many-df-games.sh
+#else
    #now run the game
    cd "$userdir"
    exec "$userdir/df-launch.sh"
    #exec strace -v -s 4096 -ff -o /tmp/traces/trace.$$. $userdir/df 
-fi
+#fi
 
 
