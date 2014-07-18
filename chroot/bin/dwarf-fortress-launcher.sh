@@ -72,7 +72,7 @@ sed "s/df_XXXXXX/${major_version}\/df_${user}/g"> "$userdir/dwizzell.pl"
 
 
 #check to see if we have enough open slots
-num_current_games=`ls -R -1 ${inprogressdir} |wc -l`
+#TODO num_current_games=`ls -R -1 ${inprogressdir} |wc -l`
 
 if [ "${num_current_games}" -gt "${MAXGAMES}" ]; then
    exec /bin/too-many-df-games.sh
