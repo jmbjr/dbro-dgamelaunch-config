@@ -12,13 +12,7 @@ Dwarf Fortress: http://bay12games.com/dwarves
 Logged in as: $USERNAME
 W) Watch games in progress
 
-0) Dungeon Crawl Stone Soup Trunk
-1) Dungeon Crawl Stone Soup Farmer
-2) Dungeon Crawl Stone Soup Helen
-3) Dungeon Crawl Stone Soup Potion_Fun
-4) Dungeon Crawl Stone Soup Webtiles-Changes
-5) Dungeon Crawl Stone Soup Bloax player.cc hpregen build
-D) Dwarf Fortress (current versions v40.01, v34.11)
+D) Dwarf Fortress (current versions v40.03)
 
 c) Change password  e) Change email address
 

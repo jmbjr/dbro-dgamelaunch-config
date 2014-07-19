@@ -12,15 +12,9 @@ Dwarf Fortress: http://bay12games.com/dwarves
 Logged in as: $USERNAME (admin)
 W) Watch games in progress
 
-0) Crawl-Trunk
-1) Crawl-Farmer
-2) Crawl-Helen
-3) Crawl-Potion_Fun
-4) Crawl-Webtiles-Changes
-5) Crawl-Bloax hpregen
 D) Dwarf-Fortress
 
 c) Change password  e) Change email address
 
-Q)uit or P)lay or S)print or Z)otDef in Crawl Trunk now
+Q)uit 
 => 
