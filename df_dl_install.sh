@@ -17,6 +17,8 @@ rm -r df_linux
 wget http://www.bay12games.com/dwarves/df_${version_string}_linux.tar.bz2
 tar -xjvf df_${version_string}_linux.tar.bz2
 
+chmod -R g+rwx df_linux
+
 mv df_linux/command\ line.txt df_linux/command_line.txt
 mv df_linux/data/art/font\ license.txt df_linux/data/art/font_license.txt
 mv df_linux/file\ changes.txt df_linux/file_changes.txt
