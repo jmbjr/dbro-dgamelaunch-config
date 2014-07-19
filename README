@@ -15,7 +15,9 @@ The main difference is the addition of the dfdir and the lack of using dgl to pr
 
 Things to be aware of:
 The dwizzell bot needs some serious work. It parrots gamelog events to an IRC channel (similar to the crawl bots which it is heavily based on).
-The issue is, the DF gamelog
+The issue is, the DF gamelog isn't really formatted for use in milestone announcement. 
+A better solution (I think) would be to parse the gamelog into a more sane format. Maybe you could hack soundsense to write a nicely formatted line to a common gamelog file (rather than playing a sound).
+Then you could replace all the individual dwizzell bots with a single annoucement bot (similar to how crawl does it).
 
 DF is a CPU hog. World Gen pegged my VPS pretty bad so I added a way for the server admin to upload worlds to a templates folder that get copied to new player folders. This way the server admin can encourage players to not kill the server and just use a pregenerated world. 
 I didn't know how to disable world gen.
