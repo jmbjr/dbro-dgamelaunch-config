@@ -1,3 +1,43 @@
+DorfServer 1.0
+Detailed instructions on setting up your own server at:
+https://github.com/jmbjr/dbro-dgamelaunch-config/wiki/Setting-up-dgamelaunch-for-dorfserver
+
+NOTE: I hacked this together pretty crudely. It works but I had to continually wrestle with stupid typos in the dgamelaunch config files along with multiple file system permission issues.
+
+Definitely use at your own risk. 
+
+Basically, this is a ssh/console based dwarf fortress server that allows folks to log in, fire up a game and play via ssh and let their friends watch.
+There's an IRC bot that spins up for each player that will announce some interesting milestones based on the gamelog.
+
+
+This is HEAVILY based on dgamelaunch-powered Dungeon Crawl Stone Soup setup.  
+The main difference is the addition of the dfdir and the lack of using dgl to properly manage and install new DF versions. This could be added.
+
+Things to be aware of:
+The dwizzell bot needs some serious work. It parrots gamelog events to an IRC channel (similar to the crawl bots which it is heavily based on).
+The issue is, the DF gamelog
+
+DF is a CPU hog. World Gen pegged my VPS pretty bad so I added a way for the server admin to upload worlds to a templates folder that get copied to new player folders. This way the server admin can encourage players to not kill the server and just use a pregenerated world. 
+I didn't know how to disable world gen.
+
+Dgamelaunch uses TTYRECs to allow watching of the games. For crawl, it looks for certain codes in the TTYREC to know at which point to start letting the watchers watch. Thing is, these aren't the same codes for DF so when you start watching a DF game, you start watching from the beginning. 
+This is interesting but there's probably a much better solution.
+
+I wanted to add a way to allow players to edit their init files. This wouldn't be difficult with ee and virus (which come along with the dgamelaunch setup). I just never prioritized it.
+The install scripts try to set the basic init options, like TEXT mode and setting the window size and turning off sound. But it could be useful (potentially) for players who know what they are doing to have edit access.
+
+There's very little error trapping so when things break, they break. 
+Common Issues:
+Can't create a new account:  check your dgamelaunch.db permissions
+Can't launch a game (selecting a version to play results in nothing happening): this is likely a permissions issue in dfdir or dgldir
+The lobby crashes or is unresponsive (similar to above): check dbro-dgamelaunch-config/dgamelaunch-dorf.conf for typos and syntax errors
+The game launches but the font looks messed up (missing characters, uneven spacing, etc): ensure you are using UTF-8 in your ssh client.
+
+
+You can contact me for questions at johnstein@berotato.org but it's faster to reach me on IRC (irc.lunarnet.org, channel #mefightclub or #mfc-df)
+
+Feel free to expand or improve on this. I'd love to see this go somewhere. Some friends and I are working on a non-dgamelaunch setup that will hopefully be a TON easier to set up and maintain.
+
 dgamelaunch-dev.config
 ------------------
 
