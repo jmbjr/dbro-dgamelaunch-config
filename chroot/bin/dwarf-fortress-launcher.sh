@@ -19,8 +19,8 @@ dfdir="/dfdir/${major_version}/df_linux"
 userdir="/dfdir/${major_version}/df_$user"
 dflauncher="/bin/df-launch.sh"
 dwizzell="/bin/dwizzell.pl.sh"
-MAXGAMES=6
-inprogressdir="/dgldir/inprogress"
+MAXGAMES=1
+inprogressdir="/dgldir/inprogress/${major_version}"
 
 #check to see if dir exist
 
@@ -72,15 +72,16 @@ sed "s/df_XXXXXX/${major_version}\/df_${user}/g"> "$userdir/dwizzell.pl"
 
 
 #check to see if we have enough open slots
-#TODO num_current_games=`ls -R -1 ${inprogressdir} |wc -l`
+#TODO 
+num_current_games=`ls -R -1 ${inprogressdir} |wc -l`
 
-#if [ "${num_current_games}" -gt "${MAXGAMES}" ]; then
-#   exec /bin/too-many-df-games.sh
-#else
+if [ "${num_current_games}" -gt "${MAXGAMES}" ]; then
+   exec /bin/too-many-df-games.sh
+else
    #now run the game
    cd "$userdir"
    exec "$userdir/df-launch.sh"
    #exec strace -v -s 4096 -ff -o /tmp/traces/trace.$$. $userdir/df 
-#fi
+fi
 
 
