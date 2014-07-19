@@ -20,7 +20,7 @@ userdir="/dfdir/${major_version}/df_$user"
 dflauncher="/bin/df-launch.sh"
 dwizzell="/bin/dwizzell.pl.sh"
 MAXGAMES=1
-inprogressdir="/dgldir/inprogress/${major_version}"
+inprogressdir="/dgldir/inprogress/df-${major_version}"
 
 #check to see if dir exist
 
@@ -74,8 +74,9 @@ sed "s/df_XXXXXX/${major_version}\/df_${user}/g"> "$userdir/dwizzell.pl"
 #check to see if we have enough open slots
 #TODO 
 num_current_games=`ls -R -1 ${inprogressdir} |wc -l`
-
+echo ${num_current_games}
 if [ "${num_current_games}" -gt "${MAXGAMES}" ]; then
+   echo "Too many DF Games!"
    exec /bin/too-many-df-games.sh
 else
    #now run the game
