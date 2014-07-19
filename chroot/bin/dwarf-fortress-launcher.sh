@@ -19,7 +19,7 @@ dfdir="/dfdir/${major_version}/df_linux"
 userdir="/dfdir/${major_version}/df_$user"
 dflauncher="/bin/df-launch.sh"
 dwizzell="/bin/dwizzell.pl.sh"
-MAXGAMES=1
+MAXGAMES=2
 inprogressdir="/dgldir/inprogress/df-${major_version}"
 
 #check to see if dir exist
