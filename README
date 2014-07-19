@@ -13,7 +13,7 @@ There's an IRC bot that spins up for each player that will announce some interes
 This is HEAVILY based on dgamelaunch-powered Dungeon Crawl Stone Soup setup.  
 The main difference is the addition of the dfdir and the lack of using dgl to properly manage and install new DF versions. This could be added.
 
-Things to be aware of:
+---Things to be aware of---
 The dwizzell bot needs some serious work. It parrots gamelog events to an IRC channel (similar to the crawl bots which it is heavily based on).
 The issue is, the DF gamelog isn't really formatted for use in milestone announcement. 
 A better solution (I think) would be to parse the gamelog into a more sane format. Maybe you could hack soundsense to write a nicely formatted line to a common gamelog file (rather than playing a sound).
@@ -34,6 +34,11 @@ Can't create a new account:  check your dgamelaunch.db permissions
 Can't launch a game (selecting a version to play results in nothing happening): this is likely a permissions issue in dfdir or dgldir
 The lobby crashes or is unresponsive (similar to above): check dbro-dgamelaunch-config/dgamelaunch-dorf.conf for typos and syntax errors
 The game launches but the font looks messed up (missing characters, uneven spacing, etc): ensure you are using UTF-8 in your ssh client.
+
+I really wanted to get dfhack working with this. I don't think it would take much, but I never fully scoped it out. 
+dfhack would allow some better job management (which seems to be a common complaint of vanilla DF). 
+
+I did briefly try to get Dwarf Therapist working via X11, which technically worked... but the lag was horrendous and the more I read about X11, the more I realized I probably don't want to go down that route.
 
 
 You can contact me for questions at johnstein@berotato.org but it's faster to reach me on IRC (irc.lunarnet.org, channel #mefightclub or #mfc-df)
